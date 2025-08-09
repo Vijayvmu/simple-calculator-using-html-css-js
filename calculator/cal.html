@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+  <h1>Your Calculator Here</h1>
+  <div class="container">
+    <div class="calculator">
+      <input type="text" placeholder="0" id="display" readonly>
+      
+      <!--section 1-->
+      <button onclick="num1()">1</button>
+      <button onclick="num2()">2</button>
+      <button onclick="num3()">3</button>
+      <button onclick="operatorPlus()" >+</button>
+
+      <!--section 2-->
+      <button onclick="num4()">4</button>
+      <button onclick="num5()">5</button>
+      <button onclick="num6()">6</button>
+      <button onclick="operatorMinus()" >-</button>
+      
+      <!--section 3-->
+      <button onclick="num7()">7</button>
+      <button onclick="num8()">8</button>
+      <button onclick="num9()">9</button>
+      <button onclick="operatorMul()" >*</button>
+      
+      <!--section 4-->
+      <button onclick="num0()">0</button>
+      <button onclick="operatorMod()" >%</button>
+      <button onclick="operatorDiv()" >/</button>
+      <button onclick="submit()" >=</button>
+      
+      <!--Ac button-->
+      <button onclick="Clear()" class="acbtn">AllClear</button>
+    </div>
+    </div>
+  </div>
+  <script src="cal.js"></script>
+</body>
+
+</html>
