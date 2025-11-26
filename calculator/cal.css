@@ -45,6 +45,19 @@ input{
     border:none;
     border-radius: 20px;
 }
+#btn1{
+    display:contents;
+    flex-direction: row;
+}
+#btn2{
+    display: contents;
+    flex-direction: row;
+}
+#btn3{
+    display: contents;
+    flex-direction: row;
+}
+
 
 button{
     background-color: rgb(156, 156, 156);

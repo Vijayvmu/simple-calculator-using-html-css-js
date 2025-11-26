@@ -1,52 +1,52 @@
+let button1 = document.getElementById("btn1");
+let button2 = document.getElementById("btn2");
+let button3 = document.getElementById("btn3");
+let htmlbutton1 = "";
+let htmlbutton2 = "";
+let htmlbutton3 = "";
+// div1
+for(let i=1;i<=3;i++){
+    htmlbutton1 += `<button onclick="num(${i})">${i}</button>`
+}
+button1.innerHTML = htmlbutton1;
+//div2
+for(let i=4;i<=6;i++){
+    htmlbutton2 += `<button onclick="num(${i})">${i}</button>`
+}
+button2.innerHTML = htmlbutton2;
+
+//div3
+for(let i=7;i<=9;i++){
+    htmlbutton3 += `<button onclick="num(${i})">${i}</button>`
+}
+button3.innerHTML = htmlbutton3;
+
 const  display=document.getElementById("display");
 
-/* created an functions for display the number */
-function num1(){
-    display.value += "1";
-}
-function num2(){
-    display.value += "2";
-}
-function num3(){
-    display.value += "3";
-}
-function num4(){
-    display.value += "4";
-}
-function num5(){
-    display.value += "5";
-}
-function num6(){
-    display.value += "6";
-}
-function num7(){
-    display.value += "7";
-}
-function num8(){
-    display.value += "8";
-}
-function num9(){
-    display.value += "9";
-}
-function num0(){
-    display.value += "0";
+/* create an functions for display numbers when key presses in the device */
+document.addEventListener("keydown", function (event) {
+    const key = event.key;
+
+    // allow backspace, delete, arrows, tab
+    const allowed = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"];
+    if (allowed.includes(key)) return;
+
+    // allow only numbers
+    if (key >=0 && key<=9) {
+        return;
+    }
+    event.preventDefault();
+});
+
+
+/* create an functions for display the number */
+function num(value){
+    display.value += value;
 }
 
 /* creating functions for display the operator */
-function operatorPlus(){
-    display.value += "+";
-}
-function operatorMinus(){
-    display.value += "-";
-}
-function operatorMul(){
-    display.value += "*";
-}
-function operatorDiv(){
-    display.value += "/";
-}
-function operatorMod(){
-    display.value += "%";
+function operator(value){
+    display.value += value;
 }
 
 function Clear(){
